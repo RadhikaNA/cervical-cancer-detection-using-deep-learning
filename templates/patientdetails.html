@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Title</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+    font-family: "Open Sans", sans-serif;
+    background-image: url('xx');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /*--------------------------------------------------------------
+  # Sections General
+  --------------------------------------------------------------*/
+  section {
+    margin-top: 8vh;
+    /* padding: 60px 0; */
+    overflow: hidden;
+    /* height: 90vh; */
+    box-shadow: 0px 0 5px rgba(42, 44, 57, 0.25);
+    background-color: aliceblue;
+  }
+  
+  .portfolio-details {
+    margin-top: 25px;
+    width: 50%;
+    margin: auto;
+  }
+
+  .portfolio-details .portfolio-info {
+    padding: 10px 30px;
+    /* height: 82vh; */
+  }
+
+  .portfolio-details .portfolio-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(188, 178, 178);
+    text-align: center;
+  }
+
+  </style>
+
+</head>
+
+<body>
+  {% block content %}
+ 
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">PATIENT DETEAILS</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <section id="portfolio" class="portfolio-details">
+            <div class="portfolio-info">
+              <h3>Patient Details</h3>
+              <form action="/create_datsets" method="POST" >
+                <div class="form-group">
+                  <!-- <label for="Id"></label> -->
+                 
+                  <input type="text" class="form-control" id="Id" name="Id" placeholder="Patient Id">
+                </div>
+                <div class="form-group">
+                  <!-- <label for="Name">:</label> -->
+                  <input type="text" placeholder="Patient Name" class="form-control" id="Name" name="Name">
+                </div>
+                <div class="form-group">
+                  <!-- <label for="Phone">:</label> -->
+                  <input type="tel" placeholder="Phone No." class="form-control" id="Phone" name="Phone">
+                </div>
+                <div class="form-group">
+                  <!-- <label for="Email">:</label> -->
+                  <input type="email" placeholder="Email Id" class="form-control" id="Email" name="Email">
+                </div>
+                <div class="form-group">
+
+                        <label for="">Gender</label>
+                        <input type="radio" name="Gender" value="male" id="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" name="Gender" value="female" id="female" required>
+                        <label for="male">Female</label> 
+                    
+                </div>
+                <div class="form-group">
+                  <!-- <label for="pwd">Branch:</label> -->
+                   
+                  <input type="text" class="form-control" id="Age" name="Age" placeholder="Age"> 
+
+                    
+                </div>
+                <div class="form-group">
+                  <!-- <label for="pwd">Branch:</label> -->
+                 
+                    <!-- <label for="Name">:</label> -->
+                    <input type="text" placeholder="Address" class="form-control" id="Address" name="Address">
+                 
+                </div>
+                <div class="form-group">
+                  <!-- <label for="Id"></label> -->
+                  <!-- <input type="text" class="form-control" id="cardnum" name="cardnum" placeholder="Card number"> -->
+                </div>
+                <button type="submit" class="btn btn-success form-control">Submit</button>
+              </form>
+           
+
+    </section>
+  </div>
+
+{% endblock content %}
+</body>
+</html>
